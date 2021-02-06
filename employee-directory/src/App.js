@@ -1,20 +1,17 @@
 import React from "react";
-import "./"
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Wrapper from "./components/Wrapper";
+import Header from "./components/Header"
 
 function App() {
   return (
     <Router>
-      <div>
-        <Navbar />
         <Wrapper>
-          <Route exact path="/" component={About} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/discover" component={Discover} />
-          <Route exact path="/search" component={Search} />
+          <Header/>
+            <Route exact path="/" component={ Home }/>
         </Wrapper>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
   );
 }
 

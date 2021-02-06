@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css"
-import Search from "../../components/Search"
+import Search from "../Search"
 
 function Header() {
   return (
@@ -12,4 +12,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Header;
