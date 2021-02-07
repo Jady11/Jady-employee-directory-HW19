@@ -10,17 +10,16 @@ class Home extends Component {
   componentDidMount() {
     API.getRandomEmployee()
       .then(res => {
-        this.setState({ results: [...JSON] })
-        console.log(res.JSON)
+        this.setState({ results: res.data.results })
+        console.log(res.data.results)
       })
   }
 
   render() {
     return (
-      <div>
-        { this.state.results.length ? <Table results={ this.state.results }/> : "" }
-        
-      </div>
+      <div key={ this.state.results.length ? 
+      <Table results={ this.state.results }/> : "" }></div>
+      
     )
   }
 }

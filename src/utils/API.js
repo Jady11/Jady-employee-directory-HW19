@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API = {
   getRandomEmployee: function() {
-    return axios.get("https://randomuser.me");
+    return axios.get("https://randomuser.me/api/?results=20&nat=us");
   }
 };
 

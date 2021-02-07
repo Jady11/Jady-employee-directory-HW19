@@ -6,7 +6,7 @@ function TableBody(props) {
   return (
     <tr key={ index }>
       <td>
-        <img alt="thumbnail" src={ result.thumbnail.large }/>
+        <img alt="headshot" src={ result.headshot.small }/>
       </td>
       <td>
         { result.name.first } { result.name.last }
