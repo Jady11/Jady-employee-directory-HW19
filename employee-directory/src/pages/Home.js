@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import Table from "../components/Table";
+import Table from "../components/Table"
 
 class Home extends Component {
   state = {
-    results: [],
+    results: []
   };
 
   componentDidMount() {
     API.getRandomEmployee()
       .then(res => {
-        this.setState({ results: res.data.results })
-        console.log(res.data.results)
+        this.setState({ results: [...JSON] })
+        console.log(res.JSON)
       })
   }
 
   render() {
     return (
       <div>
-        { this.state.results.length ? 
-        <Table results={ this.state.results }/> : "" }
+        { this.state.results.length ? <Table results={ this.state.results }/> : "" }
+        
       </div>
     )
   }

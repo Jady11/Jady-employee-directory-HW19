@@ -6,10 +6,10 @@ function TableBody(props) {
   return (
     <tr key={ index }>
       <td>
-        <img alt="headshot" src={result.picture.large}/>
+        <img alt="thumbnail" src={ result.thumbnail.large }/>
       </td>
       <td>
-        { result.name.first } {result.name.last}
+        { result.name.first } { result.name.last }
       </td>
       <td>
         { new Date(result.dob.date).toLocaleDateString() }

@@ -4,6 +4,7 @@
 ## EMPLOYEE DIRECTORY
 
 ## User Story
+* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
 ## Table of Contents
 
@@ -13,7 +14,14 @@
 
 ## Technology Used
 
+
+[Random User API](https://randomuser.me/)
+
 ## Links
+github:
+https://github.com/Jady11/Jady-employee-directory-HW19
+
+
 
 ## License 
 
