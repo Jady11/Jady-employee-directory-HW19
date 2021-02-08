@@ -18,7 +18,7 @@ function Table(props) {
           </th>
           <th scope="col">
             <button type="button">
-              DOB 
+              DOB { results[0].gender}
             </button>
           </th>
           <th scope="col">
@@ -34,8 +34,9 @@ function Table(props) {
         </tr>
       </thead>
       <tbody>
-        { results?.map((result, index) => (
-          <TableBody results={ result } index={ index }/>
+        { results.map((results) => (
+          <TableBody results={ results }/>
+          
         ))}
       </tbody>
     </table>

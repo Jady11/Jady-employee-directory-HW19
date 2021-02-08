@@ -1,24 +1,24 @@
 import React from "react";
 
 function TableBody(props) {
-  const { result, index } = props
-  console.log(result)
+  const { results } = props
+  console.log(results)
   return (
-    <tr key={ index }>
+    <tr key={ results.email }>
       <td>
-        <img alt="headshot" src={ result.headshot.small }/>
+        <img alt="picture" src={ results.picture.medium }/>
       </td>
       <td>
-        { result.name.first } { result.name.last }
+        { results.name.first } { results.name.last }
       </td>
       <td>
-        { new Date(result.dob.date).toLocaleDateString() }
+        { new Date(results.dob.date).toLocaleDateString() }
       </td>
       <td>
-        { result.email }
+        { results.email }
       </td>
       <td>
-        { result.phone }
+        { results.phone }
       </td>
     </tr>
 )

@@ -17,8 +17,11 @@ class Home extends Component {
 
   render() {
     return (
-      <div key={ this.state.results.length ? 
-      <Table results={ this.state.results }/> : "" }></div>
+      <div className container>
+        { this.state.results.length > 0 ? 
+      <Table results={ this.state.results }/> : "" }
+
+      </div>
       
     )
   }
