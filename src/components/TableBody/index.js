@@ -4,7 +4,7 @@ function TableBody(props) {
   const { results } = props
   console.log(results)
   return (
-    <tr key={ results.email }>
+    <tr key={ results.name }>
       <td>
         <img alt="picture" src={ results.picture.medium }/>
       </td>

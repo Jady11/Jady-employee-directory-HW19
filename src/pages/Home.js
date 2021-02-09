@@ -4,16 +4,40 @@ import Table from "../components/Table"
 
 class Home extends Component {
   state = {
-    results: []
+    results: [],
+    search: ""
   };
 
+  // const sortList = results.name => {
+  // };
+
   componentDidMount() {
-    API.getRandomEmployee()
+    API.search("")
       .then(res => {
+        console.log("mounting", res.data.results);
         this.setState({ results: res.data.results })
-        console.log(res.data.results)
+        // console.log(res.data.results)
       })
+      .catch(err => console.log(err));
   }
+
+  searchEmployee = query => {
+    return this.state.results.filter(person => person.name.first.includes(query) 
+    || person.name.includes(query)
+    || person.phone.includes(query))
+  };
+
+  handleInputChange = event => {
+    const value = event.target.value;
+    const name = event.target.name;
+    this.setState({
+      [name]: value 
+    });
+  };
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.render();
+  };
 
   render() {
     return (
