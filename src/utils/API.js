@@ -1,9 +1,15 @@
 import axios from "axios";
+const BASEURL = "https://randomuser.me/api/?results=20";
 
-const API = {
-  getRandomEmployee: function() {
-    return axios.get("https://randomuser.me/api/?results=20&nat=us");
-  }
+export default {
+  search: async function() {
+    let response =
+      await axios.get(BASEURL)
+      .then(x => x)
+      .catch(err => console.log("error: ", err));
+      console.log("API.search() called", response);
+      return response;
+ 
+    }
 };
 
-export default API;

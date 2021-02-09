@@ -1,10 +1,18 @@
 import React from "react";
-import "./style.css";
+// import "./style.css";
 
-export default function Wrapper(props) {
-  return <main className="wrapper">
+
+
+function Wrapper(props) {
+  const size = props.size.split(" ").map(size => "col-" + size).join(" ");
+
+  return (
+    <div className={size}>
     { props.children }
-  </main>;
-  
+    </div>
+    
+
+  );
 };
 
+export default Wrapper;
