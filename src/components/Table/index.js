@@ -1,47 +1,22 @@
 import React from "react";
-import TableBody from "../TableBody";
-import "./style.css";
-import { sortList } from "../../pages/Home"
+// import TableBody from "../TableBody";
+// import "./style.css";
+// import { sortList } from "../../pages/Home"
 
 
 function Table(props) {
   const { results } = props
   return (
-    <table className="table">
-      <thead className="thead-dark">
-        <tr>
-          <th scope="col">
-            Photo
-          </th>
-          <th scope="col">
-            <button type="button" onClick={e => sortList(results.name)}>
-              Employee Name 
-            </button>
-          </th>
-          <th scope="col">
-            <button type="button" onClick={() => sortList(results.dob)}>
-              DOB 
-            </button>
-          </th>
-          <th scope="col">
-            <button type="button" onClick={() => sortList(results.email)}>
-              Employee Email 
-            </button>
-          </th>
-          <th scope="col">
-            <button type="button" onClick={() => sortList(results.phone)}>
-              Employee Phone 
-            </button>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        { results.map((results) => (
-          <TableBody results={ results }/>
-          
-        ))}
-      </tbody>
-    </table>
+    <div className="text-center">
+      <ul className="list-group list-group-flush list-group-horizontal-sm">
+        <li className="list-group-item"><img alt={ props.name } 
+        className="img-fluid" src={ props.picture } 
+        style={{ margin: "0 auto" }} /></li>
+        <li className="list-group-item"> { props.name.first } { props.name.last }</li>
+        <li className="list-group-item"> { props.phone }</li>
+        <li className="list-group-item"> { props.email }</li>
+      </ul>
+    </div>
   );
 }
 
